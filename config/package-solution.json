@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "meet-the-team-client-side-solution",
+    "id": "78eb9f3f-36e2-4476-b207-5e568c9181c7",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/meet-the-team.sppkg"
+  }
+}

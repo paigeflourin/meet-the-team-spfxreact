@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.1.1",
+    "libraryName": "meet-the-team",
+    "libraryId": "78eb9f3f-36e2-4476-b207-5e568c9181c7",
+    "environment": "spo"
+  }
+}

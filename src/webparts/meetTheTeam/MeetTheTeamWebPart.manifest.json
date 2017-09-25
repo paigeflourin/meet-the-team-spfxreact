@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "c774a261-7f62-4c73-bc4e-8848f7e9e0cc",
+  "alias": "MeetTheTeamWebPart",
+  "componentType": "WebPart",
+  "version": "*", // The "*" signifies that the version should be taken from the package.json
+  "manifestVersion": 2,
+
+  /**
+   * This property should only be set to true if it is certain that the webpart does not
+   *  allow arbitrary scripts to be called
+   */
+  "safeWithCustomScriptDisabled": false,
+
+  "preconfiguredEntries": [{
+    "groupId": "c774a261-7f62-4c73-bc4e-8848f7e9e0cc",
+    "group": { "default": "Under Development" },
+    "title": { "default": "MeetTheTeam" },
+    "description": { "default": "MeetTheTeam description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "MeetTheTeam"
+    }
+  }]
+}
