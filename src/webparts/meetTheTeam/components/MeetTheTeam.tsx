@@ -8,6 +8,7 @@ import MockHttpClient from '../mocks/MockHttpClient';
 import * as pnp from "sp-pnp-js"; 
 import { AppSettings } from '../services/Settings';
 
+import { Grid, Row, Col } from 'react-bootstrap';
 
 import {
   Environment,
@@ -36,20 +37,28 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
 
   public render(): React.ReactElement<IMeetTheTeamProps> {
     return (
-      <div> 
+      <div> <h1> Business Productivity Team </h1> <div className="col-md-3">
         { 
           this.state.teamMembers.map(function (member){
             console.log(member);
-            return <div className={styles.meetTheTeam}>
-              <div className={styles.container}>
-                <div> 
-                  <h1> TEST!!!! </h1>
-                  <div> {member.Name} </div>
+            return <div key={member.Id} className={styles.meetTheTeam}>
+                <div  className={styles.speakers}>
+                      <a href="#" className={styles.memberprofile}>
+                        <div className={styles.unhoverimg}>
+                          <img src={member.PhotoUrl} alt="" > 
+                          </img>
+                        </div>
+                        <div className={styles.hoverimg}>
+                          <img src={member.PhotoUrlHover} alt="" >
+                          </img>
+                        </div>
+                        <span>{member.Title}</span>
+                        <h4><span>{member.Name} </span> </h4>
+                      </a>	
                 </div>
               </div>
-            </div>
         }) 
-        } </div>
+        } </div> </div>
     );
     
   }

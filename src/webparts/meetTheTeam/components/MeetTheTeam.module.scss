@@ -1,9 +1,147 @@
-.meetTheTeam {
-  .container {
+* {margin: 0; padding: 0;}
+
+p {line-height: 160%;}
+
+a {text-decoration: none; color: #000; transition: all 0.1s ease-in;}
+img {border: 0;}
+
+.clear {clear: both;}
+
+/* Buttons */
+.btn {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 40px;
+	color: #000;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 20px;
+	outline: 0;
+	transition: all 0.1s ease-in;
+}
+
+.btn-transparent {background: rgba(0,0,0, 0.2);}
+.btn-transparent:hover {background: rgba(0,0,0, 0.4);}
+
+/* Separators */
+.separator {
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.2);
+	width: 30px;
+	height: 5px;
+}
+
+
+/* 03. SPEAKERS SETTINGS ============================================ */
+
+.speakers {
     max-width: 700px;
     margin: 0px auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  }
+
+    p {
+      padding: 20px 0 60px;
+      color: #000;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+    }
+
+    h3 {
+      padding: 0 0 15px;
+      font-family: 'norwester';
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+
+    h4  {
+      margin-top: -20px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    img:hover {
+      border: 15px solid #3980C9;
+      position: relative;
+      z-index: 10;
+      transition: all 0.1s ease-in;	
+    }
+
+    img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 50%; 
+      border: 15px solid transparent; 
+      box-shadow: 2px 2px 0px rgba(0,0,0, 0.18);
+      transition: all 0.1s ease-in;
+    }
+
+    h4 span {
+      display: block;
+      position: relative;
+      left: -40px;
+      top: 10px;
+      font-size: 20px;
+      background: none;
+      padding: 0;
+    }
+
+    span {
+      padding: 8px 20px;
+      position: relative;
+      top: -64px;
+      left: -42px;
+      display: inline-block;
+      background: #4593e3;
+      border-radius: 0 16px 16px 0;
+      font-size: 16px;
+    }
+
+}
+
+/* Member Image Hover Effect */
+.hoverimg {
+  display: none
+}
+
+.memberprofile:hover .unhoverimg{
+  display: none;
+}
+
+.memberprofile:hover .hoverimg {
+  display: block;
+}
+
+/* Social Networks Meta */
+#speakers li {display: inline-block; padding: 0 6px; font-size: 18px;}
+#speakers li a {color: rgba(0,0,0, 0.3); transition: all 0.1s ease-in;}
+#speakers li a:hover {color: rgba(0,0,0, 0.7);}
+
+/* Rows Optimization */
+.row2 {
+	display: none;
+}
+
+.row1 .col-md-3, .row2 .col-md-3 {
+	padding-bottom: 40px;
+}
+
+/* Mobile Devices Optimization */
+@media (min-width: 568px) and (max-width: 992px) {
+
+	.row1 .col-md-3, .row2 .col-md-3 {
+		display: inline-block;
+		max-width: 50%;
+	}
+
+	#speakers img {max-width: 300px;}
+
+}
+
+.meetTheTeam {
+
+  
 
   .row {
     padding: 20px;

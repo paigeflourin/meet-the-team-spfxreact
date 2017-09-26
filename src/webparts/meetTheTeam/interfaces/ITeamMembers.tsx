@@ -3,5 +3,6 @@ export interface ITeamMembers {
     Name: string;
     Title: string;
     PhotoUrl: string;
+    PhotoUrlHover: string;
     ApplicationsSupported: string[];
   };
