@@ -9,6 +9,8 @@ import * as pnp from "sp-pnp-js";
 import { AppSettings } from '../services/Settings';
 
 import { Grid, Row, Col } from 'react-bootstrap';
+import FontAwesome = require('react-fontawesome')
+
 
 import {
   Environment,
@@ -36,29 +38,38 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
 
 
   public render(): React.ReactElement<IMeetTheTeamProps> {
+
     return (
-      <div> <h1> Business Productivity Team </h1> <div className="col-md-3">
+      <div> <h1> Business Productivity Team </h1> <Grid fluid={true}>
         { 
           this.state.teamMembers.map(function (member){
             console.log(member);
-            return <div key={member.Id} className={styles.meetTheTeam}>
-                <div  className={styles.speakers}>
+            return <div key={member.Id}  className={styles.colMd3} >
+                <div key={member.Id}  className={styles.speakers}>
                       <a href="#" className={styles.memberprofile}>
-                        <div className={styles.unhoverimg}>
-                          <img src={member.PhotoUrl} alt="" > 
-                          </img>
-                        </div>
-                        <div className={styles.hoverimg}>
-                          <img src={member.PhotoUrlHover} alt="" >
-                          </img>
-                        </div>
-                        <span>{member.Title}</span>
+                        <figure> 
+                          <div className={styles.unhoverimg}>
+                            <img src={member.PhotoUrl} alt="" > 
+                            </img>
+                          </div>
+                          <div className={styles.hoverimg}>
+                            <img src={member.PhotoUrlHover} alt="" >
+                            </img>
+                          </div>
+                          <figcaption> 
+                            
+                            
+                          </figcaption>
+                        </figure>
+                        
+                        
+                        <h5>{member.Title}</h5>
                         <h4><span>{member.Name} </span> </h4>
                       </a>	
                 </div>
               </div>
         }) 
-        } </div> </div>
+        } </Grid> </div> 
     );
     
   }
