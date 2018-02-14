@@ -8,6 +8,7 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 
+import * as pnp from "sp-pnp-js"; 
 import * as strings from 'meetTheTeamStrings';
 import MeetTheTeam from './components/MeetTheTeam';
 import { IMeetTheTeamProps } from './components/IMeetTheTeamProps';
@@ -15,6 +16,15 @@ import { IMeetTheTeamWebPartProps } from './IMeetTheTeamWebPartProps';
 
 export default class MeetTheTeamWebPart extends BaseClientSideWebPart<IMeetTheTeamWebPartProps> {
   
+  public onInit(): Promise<void> {
+    return super.onInit().then(_ => {
+      // establish SPFx context
+      pnp.setup({
+        spfxContext: this.context
+      });
+
+    });
+  }
  
   public render(): void {
     const element: React.ReactElement<IMeetTheTeamProps > = React.createElement(

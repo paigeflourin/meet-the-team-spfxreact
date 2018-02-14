@@ -1,8 +1,8 @@
 export interface ITeamMembers {
     Id: number;
-    Name: string;
+    EmpName: string;
     Title: string;
     PhotoUrl: string;
     PhotoUrlHover: string;
-    ApplicationsSupported: string[];
+    ApplicationsSupported: string;
   };

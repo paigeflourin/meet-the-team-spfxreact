@@ -2,7 +2,28 @@
   "solution": {
     "name": "meet-the-team-client-side-solution",
     "id": "78eb9f3f-36e2-4476-b207-5e568c9181c7",
-    "version": "1.0.0.0"
+    "version": "1.0.0.6",
+    "features": [
+      {
+        "id": "19dca56f-089a-4bff-aaab-c147b042ca5d",
+        "title": "Meet the Team Web part feature",
+        "description": "A feature which activates the Client-Side WebPart named Team Members",
+        "version": "1.0.0.6"
+      },
+      {
+      "title": "meet-the-team-client-side-solution",
+      "description": "meet-the-team-client-side-solution",
+      "id": "e7936b70-d1f0-403b-9ca3-dc11433a6d5f",
+      "version": "1.0.0.6",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
   },
   "paths": {
     "zippedPackage": "solution/meet-the-team.sppkg"

@@ -65,6 +65,7 @@ img {border: 0;}
       border: 15px solid #3980C9;
       position: relative;
       z-index: 10;
+      border-radius: 50%; 
       transition: all 0.1s ease-in;	
       -webkit-transform: scale(1.1) rotate(1deg) translateY(12px);
       -moz-transform: scale(1.1) rotate(1deg) translateY(12px);
@@ -105,21 +106,21 @@ img {border: 0;}
       padding: 0;
     }
 
-    span {
-      padding: 8px 20px;
-      position: relative;
-      top: -64px;
-      /*left: -42px;*/
-      display: inline-block;
-      background: #4593e3;
-      border-radius: 0 16px 16px 0;
-      font-size: 11px;
+    .applicationSupported {
+        font-size: 14px;
+        padding: 5px;
+        /*left: 34%;*/
+        margin-top: 10px;
+        color: #3980c9;
+        display: inline-block;
+        font-size: 11px;  
     }
 
 }
 
-/*.memberprofile {
-  figure:hover figcaption {
+.memberprofile {
+  
+  /*figure:hover figcaption {
     visibility: visible;
     color: #fff;
     background: rgba(230, 78, 62, 0.9);
@@ -129,10 +130,14 @@ img {border: 0;}
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+  }*/
+
+  figure:hover figcaption ul li a:hover {
+    color: rgba(49, 49, 49, .97);
   }
 
-
   figcaption {
+    border-radius: 50%;
     padding: 0px;
     color: transparent;
     background-color: transparent;
@@ -152,6 +157,7 @@ img {border: 0;}
 
   figcaption p {
     font-size: 11px;
+    text-align: center;
   }
 
   figcaption ul {
@@ -159,11 +165,24 @@ img {border: 0;}
     margin: 0;
     padding: 0;
   }
-}*/
+
+  figcaption ul {
+    visibility: visible;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  figcaption ul li {
+    display: inline-block;
+    padding: 10px;
+  }
+
+}
 
 .colMd3{
   float:left;
-  width:25%;
   padding: 25px;
 }
 /* Member Image Hover Effect */

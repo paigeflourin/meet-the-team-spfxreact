@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+   <Field ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F6}"
+           Name="PhotoUrl"
+           DisplayName="PhotoUrl"
+           Type="Text"
+           Required="FALSE"
+           Group="Team Members Columns" />
+
+    <Field ID="{68AE5980-0A4C-4BB0-AC90-A0D18AFD6C7D}"  
+            Name="ApplicationsSupported" 
+            DisplayName="ApplicationsSupported"
+            Type="Text"
+           Required="FALSE"
+           Group="Team Members Columns" />
+
+    <Field ID="{64732C35-22DE-438B-BEA6-4FA14196032A}"
+           Name="EmpName"
+           DisplayName="EmpName"
+           Type="Text"
+           Required="FALSE"
+           Group="Team Members Columns" />
+
+    <Field ID="{853258A6-03F7-49D8-B46C-214396BF1DCC}"
+           Name="PhotoUrlHover"
+           DisplayName="PhotoUrlHover"
+           Type="Text"
+           Required="FALSE"
+           Group="Team Members Columns" />
+   
+                          
+   <ContentType ID="0x01004B3C12266A0A46A5822DC976D6FF13A6" 
+           Name="Team Members" 
+           Group="Team Members Content Types" 
+           Description="">
+       <FieldRefs>
+           <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F6}" /> 
+           <FieldRef ID="{68AE5980-0A4C-4BB0-AC90-A0D18AFD6C7D}" />
+           <FieldRef ID="{64732C35-22DE-438B-BEA6-4FA14196032A}" />
+           <FieldRef ID="{853258A6-03F7-49D8-B46C-214396BF1DCC}" />
+       </FieldRefs>
+   </ContentType> 
+
+   <ListInstance 
+           CustomSchema="schema.xml"
+           FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+           Title="OurTeam" 
+           Description="Team Members List"
+           TemplateType="100"
+           Url="Lists/OurTeam">
+   </ListInstance>
+
+</Elements>
