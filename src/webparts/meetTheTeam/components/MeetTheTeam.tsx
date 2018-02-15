@@ -64,13 +64,13 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
   }
 
   public render(): React.ReactElement<IMeetTheTeamProps> {
-    
+    console.log(this.state);
     return (
+      
       <div> <h1> Business Productivity Team </h1> <Grid fluid={true}>
         { 
           this.state.teamMembers.map(function (member){
             console.log(member);
-            console.log(this.state);
             return <div key={member.Id}  className={styles.colMd3} >
                 <div key={member.Id}  className={styles.speakers}>
                       <a href="#" className={styles.memberprofile}>
@@ -96,8 +96,8 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
                   style={customStyles}
                   contentLabel="Example Modal"
                 >
-        
-                  <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+
+                  <h2>Hello</h2>
                   <button onClick={this.closeModal}>close</button>
                   <div>I am a modal</div>
                   <form>
@@ -109,9 +109,11 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
                   </form>
                 </Modal>
               </div>
-              
         }) 
-        } </Grid> </div> 
+        } </Grid> 
+
+        
+        </div> 
     );
     
   }
