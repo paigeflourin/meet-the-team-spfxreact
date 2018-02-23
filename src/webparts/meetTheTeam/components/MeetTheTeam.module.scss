@@ -7,6 +7,11 @@ img {border: 0;}
 
 .clear {clear: both;}
 
+.memContainer {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
 /* Buttons */
 .btn {
 	display: inline-block;
@@ -182,8 +187,8 @@ img {border: 0;}
 }
 
 .colMd3{
-  float:left;
-  padding: 10px;
+  //float:left;
+  padding: 15px;
 }
 /* Member Image Hover Effect */
 .hoverimg {

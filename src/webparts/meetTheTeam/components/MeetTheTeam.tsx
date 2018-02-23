@@ -4,7 +4,7 @@ import { IMeetTheTeamProps } from './IMeetTheTeamProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { ITeamMembers } from '../interfaces';
 import MockHttpClient from '../mocks/MockHttpClient';
-import Modal from 'react-modal';
+import Modal = require('react-modal');
 import * as pnp from "sp-pnp-js"; 
 import { AppSettings } from '../services/Settings';
 
@@ -48,33 +48,30 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
       teamMembers: [],
       modalIsOpen: false
     };
-
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-
   }
 
-  openModal() {
+  openModal = () =>  {
     console.log("Open Modal");
     this.setState({modalIsOpen: true});
   }
  
-  closeModal() {
+  closeModal = () => {
     this.setState({modalIsOpen: false});
   }
 
   public render(): React.ReactElement<IMeetTheTeamProps> {
-    console.log(this.state);
+    const { teamMembers, modalIsOpen } = this.state
+    const { closeModal, openModal } = this
+    console.log(teamMembers)
     return (
       
-      <div> <h1> Business Productivity Team </h1> <Grid fluid={true}>
+      <div> <h1> Business Productivity Team </h1> <Grid fluid={true} className={styles.memContainer}>
         { 
-          this.state.teamMembers.map(function (member){
-            console.log(member);
+          teamMembers && teamMembers.map(function (member){
             return <div key={member.Id}  className={styles.colMd3} >
                 <div key={member.Id}  className={styles.speakers}>
                       <a href="#" className={styles.memberprofile}>
-                        <figure onClick={() => {this.openModal()}}> 
+                        <figure onClick={openModal}> 
                           <div className={styles.unhoverimg}>
                             <img src={member.PhotoUrl} alt="" > 
                             </img>
@@ -90,32 +87,12 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
                         <h5 className={styles.applicationSupported}> {member.ApplicationsSupported} </h5>
                       </a>	
                 </div>
-                <Modal
-                  isOpen={this.state.modalIsOpen}
-                  onRequestClose={this.closeModal}
-                  style={customStyles}
-                  contentLabel="Example Modal"
-                >
-
-                  <h2>Hello</h2>
-                  <button onClick={this.closeModal}>close</button>
-                  <div>I am a modal</div>
-                  <form>
-                    <input />
-                    <button>tab navigation</button>
-                    <button>stays</button>
-                    <button>inside</button>
-                    <button>the modal</button>
-                  </form>
-                </Modal>
+              
               </div>
         }) 
-        } </Grid> 
-
-        
+        } </Grid>  
         </div> 
     );
-    
   }
 
   public componentDidMount(): void {
