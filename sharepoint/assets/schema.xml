@@ -16,6 +16,7 @@
          <FieldRef Name="ApplicationsSupported"></FieldRef>
          <FieldRef Name="EmpName"></FieldRef>
          <FieldRef Name="PhotoUrlHover"></FieldRef>
+         <FieldRef Name="WorkdayProfile"></FieldRef>
        </ViewFields>
        <Query>
          <OrderBy>

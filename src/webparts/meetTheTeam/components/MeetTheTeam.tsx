@@ -6,7 +6,7 @@ import { ITeamMembers } from '../interfaces';
 import MockHttpClient from '../mocks/MockHttpClient';
 import Modal = require('react-modal');
 import * as pnp from "sp-pnp-js"; 
-import { AppSettings } from '../services/Settings';
+
 
 import { Grid, Row, Col } from 'react-bootstrap';
 import FontAwesome = require('react-fontawesome');
@@ -70,7 +70,7 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
           teamMembers && teamMembers.map(function (member){
             return <div key={member.Id}  className={styles.colMd3} >
                 <div key={member.Id}  className={styles.speakers}>
-                      <a href="#" className={styles.memberprofile}>
+                      <a href={member.WorkdayProfile} className={styles.memberprofile} target="_blank">
                         <figure onClick={openModal}> 
                           <div className={styles.unhoverimg}>
                             <img src={member.PhotoUrl} alt="" > 
@@ -81,10 +81,8 @@ export default class MeetTheTeam extends React.Component<IMeetTheTeamProps, ISPL
                             </img>
                           </div>
                         </figure>
-                      
-                        <h5>{member.Title}</h5>
                         <h4><span>{member.EmpName} </span> </h4>
-                        <h5 className={styles.applicationSupported}> {member.ApplicationsSupported} </h5>
+                        <h4><span>{member.Title}</span></h4>
                       </a>	
                 </div>
               

@@ -5,4 +5,5 @@ export interface ITeamMembers {
     PhotoUrl: string;
     PhotoUrlHover: string;
     ApplicationsSupported: string;
+    WorkdayProfile: string;
   };

@@ -28,7 +28,13 @@
            Type="Text"
            Required="FALSE"
            Group="Team Members Columns" />
-   
+
+   <Field ID="{33491C80-8123-406C-A70A-E575AF507D36}"
+           Name="WorkdayProfile"
+           DisplayName="WorkdayProfile"
+           Type="Text"
+           Required="FALSE"
+           Group="Team Members Columns" />
                           
    <ContentType ID="0x01004B3C12266A0A46A5822DC976D6FF13A6" 
            Name="Team Members" 
@@ -39,6 +45,7 @@
            <FieldRef ID="{68AE5980-0A4C-4BB0-AC90-A0D18AFD6C7D}" />
            <FieldRef ID="{64732C35-22DE-438B-BEA6-4FA14196032A}" />
            <FieldRef ID="{853258A6-03F7-49D8-B46C-214396BF1DCC}" />
+           <FieldRef ID="{33491C80-8123-406C-A70A-E575AF507D36}" />
        </FieldRefs>
    </ContentType> 
 
